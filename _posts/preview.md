@@ -4,9 +4,6 @@ excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 coverImage: "/assets/blog/preview/cover.jpg"
 createdOn: "2020-03-16T05:35:07.322Z"
 updatedOn: "2020-03-20T05:35:07.322Z"
-author:
-  name: Joe Haddad
-  picture: "/assets/blog/authors/joe.jpeg"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
