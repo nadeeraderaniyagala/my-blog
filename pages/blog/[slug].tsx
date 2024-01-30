@@ -18,38 +18,38 @@ type Props = {
   preview?: boolean;
 };
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({post, morePosts, preview}: Props) {
   const router = useRouter();
   const title = `${post.title} | ${SITE_NAME}`;
   if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
+    return <ErrorPage statusCode={404}/>;
   }
   return (
-    <Layout preview={preview}>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-            <PostTitle>Loading...</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>{title}</title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                createdOn={post.createdOn}
-                updatedOn={post.updatedOn}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
-    </Layout>
+      <Layout preview={preview}>
+        <Container>
+          <Header/>
+          {router.isFallback ? (
+              <PostTitle>Loading...</PostTitle>
+          ) : (
+              <>
+                <article className="mb-32">
+                  <Head>
+                    <title>{title}</title>
+                    <meta property="og:image" content={post.ogImage.url}/>
+                  </Head>
+                  <PostHeader
+                      title={post.title}
+                      coverImage={post.coverImage}
+                      createdOn={post.createdOn}
+                      updatedOn={post.updatedOn}
+                      author={post.author}
+                  />
+                  <PostBody content={post.content}/>
+                </article>
+              </>
+          )}
+        </Container>
+      </Layout>
   );
 }
 
@@ -59,13 +59,12 @@ type Params = {
   };
 };
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({params}: Params) {
   const post = getPostBySlug(params.slug, [
     "title",
     "createdOn",
     "updatedOn",
     "slug",
-    "author",
     "content",
     "ogImage",
     "coverImage",
@@ -76,6 +75,10 @@ export async function getStaticProps({ params }: Params) {
     props: {
       post: {
         ...post,
+        author: {
+          picture: "/assets/blog/profile.png",
+          name: 'Chanaka Rathnayaka'
+        },
         content,
       },
     },

@@ -14,10 +14,10 @@ type Props = {
 
 function renderDate(updatedOn: string, createdOn: string) {
   return (
-      <div>
+      <>
         {updatedOn ? 'Updated' : 'Created'} on&nbsp;
         <DateFormatter dateString={updatedOn || createdOn}/>
-      </div>
+      </>
   );
 }
 
@@ -29,7 +29,7 @@ const PostHeader = ({title, coverImage, createdOn, updatedOn, author}: Props) =>
         <PostTitle>{title}</PostTitle>
         <div className="hidden md:flex md:mb-12 justify-between">
           <div><Avatar name={author.name} picture={author.picture}/></div>
-          <div className="text-gray-400 text-sm">
+          <div className="text-gray-400">
             {date}
           </div>
         </div>

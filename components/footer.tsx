@@ -1,31 +1,38 @@
 import Container from "./container";
-import { EXAMPLE_PATH } from "../lib/constants";
+import {SITE_NAME} from "../lib/constants";
+import {useMemo} from "react";
 
 const Footer = () => {
+  const year = useMemo(() => {
+    return (new Date()).getFullYear();
+  }, []);
+
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-[2.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
+      <footer className="bg-neutral-50 border-t border-neutral-200">
+        <Container>
+          <div className="py-28 flex flex-col lg:flex-row items-center justify-between">
+            <div className="mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
+              <h3 className="text-4xl lg:text-[2.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left">
+                {SITE_NAME}
+              </h3>
+              <div className="text-sm text-gray-500">
+                <div>
+                  Chanaka Rathnayaka
+                </div>
+                <div>
+                  &copy; All rights Reserved {year}
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center lg:pl-4 lg:w-1/4 text-gray-800">
+              <div><a className="hover:underline" href="#" target="_blank">Portfolio</a></div>
+              <div><a className="hover:underline" href="#" target="_blank">LinkedIn</a></div>
+              <div><a className="hover:underline" href="#" target="_blank">Github</a></div>
+              <div><a className="hover:underline" href="#" target="_blank">Contact me</a></div>
+            </div>
           </div>
-        </div>
-      </Container>
-    </footer>
+        </Container>
+      </footer>
   );
 };
 
