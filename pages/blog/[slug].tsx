@@ -77,7 +77,7 @@ export async function getStaticProps({params}: Params) {
         ...post,
         author: {
           picture: "/assets/blog/profile.png",
-          name: 'Chanaka Rathnayaka'
+          name: 'Nadeera Deraniyagala'
         },
         content,
       },

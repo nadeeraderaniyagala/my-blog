@@ -17,17 +17,17 @@ const Footer = () => {
                 {SITE_NAME}
               </h3>
               <div className="text-sm text-gray-500">
-                  Chanaka Rathnayaka
+                  Nadeera Deraniyagala
                 </div>
               <div className="text-sm text-gray-500">
                   &copy; All rights Reserved {year}
                 </div>
             </div>
             <div className="flex flex-col justify-center lg:pl-4 lg:w-1/4 text-gray-800">
-              <div><a className="hover:underline" href="#" target="_blank">Portfolio</a></div>
-              <div><a className="hover:underline" href="#" target="_blank">LinkedIn</a></div>
-              <div><a className="hover:underline" href="#" target="_blank">Github</a></div>
-              <div><a className="hover:underline" href="#" target="_blank">Contact me</a></div>
+              {/* <div><a className="hover:underline" href="#" target="_blank">Portfolio</a></div> */}
+              <div><a className="hover:underline" href="https://www.linkedin.com/in/nadeera-deraniyagala/" target="_blank">LinkedIn</a></div>
+              <div><a className="hover:underline" href="https://github.com/nadeeraderaniyagala" target="_blank">Github</a></div>
+              <div><a className="hover:underline" href="mailto:nadeeraderaniyagala@gmail.com" target="_blank">Contact me</a></div>
             </div>
           </div>
         </Container>

@@ -18,7 +18,7 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostType {
   const items: {} = {
     author: {
       picture: "/assets/blog/profile.png",
-      name: 'Chanaka Rathnayaka'
+      name: 'Nadeera Deraniyagala'
     }
   };
 
