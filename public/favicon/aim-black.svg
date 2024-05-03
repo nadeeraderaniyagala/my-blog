@@ -1,7 +1,1 @@
-<svg fill="none" height="234" viewBox="0 0 234 234" width="234" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="117" cy="117" r="77" stroke="#000000" stroke-width="20"/>
-  <rect fill="#000000" height="80" width="20" x="107"/>
-  <rect fill="#000000" height="80" width="20" x="107" y="154"/>
-  <rect fill="#000000" height="80" transform="rotate(-90 154 127)" width="20" x="154" y="127"/>
-  <rect fill="#000000" height="80" transform="rotate(-90 0 127)" width="20" y="127"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" transform="matrix(-1,0,0,1,0,0)"><path d="m11.23 3.649 9.125 9.125-2.541 7.07L1.419 24l8.067-8.067q.247.066.514.067a2 2 0 1 0-1.931-1.479L.005 22.586 4.149 6.191zM16 .005l-2.793 2.793 8 8L24 8.005z"></path></svg>
