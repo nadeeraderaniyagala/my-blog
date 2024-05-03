@@ -1,6 +1,6 @@
 ---
 title: "Cucumber. A testing framework?"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+excerpt: ""
 coverImage: "/assets/blog/cucumber.png"
 createdOn: "2020-03-17T05:35:07.322Z"
 updatedOn: "2020-03-17T05:35:07.322Z"
@@ -8,10 +8,15 @@ ogImage:
   url: "/assets/blog/cucumber.png"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+In the software industry I hear a lot of people say "We use Cucumber as the testing framework".   
+But should you?
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+In this blog post, I will tell you why Cucumber is not a testing framework and why you should not use Cucumber solely as a "testing framework".
 
-## Lorem Ipsum
+Then what exactly is it and how should I use it???    
+It is a tool that supports Behaviour-Driven Development(BDD) and you should use it mainly as a collaboration tool between the three amigos (business analysts, developers and testers) It does provide you with the option to write executable tests.
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+
+Don't trust me? You should check out this article written by Aslak Hellesøy (co-creator of Cucumber) himself:
+https://cucumber.io/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool/
+
