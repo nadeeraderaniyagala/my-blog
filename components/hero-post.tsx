@@ -34,11 +34,11 @@ const HeroPost = ({
             </Link>
           </h3>
           <div className="mb-4 md:mb-0 text-gray-400">
-            <DateFormatter dateString={date} />
+            <DateFormatter dateString={date}/>
           </div>
         </div>
         <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+          <p className="text-lg leading-relaxed mb-4" dangerouslySetInnerHTML={{__html: excerpt}}></p>
         </div>
       </div>
     </section>
