@@ -1,6 +1,6 @@
 ---
-title: "Selenium locators. What to pick?"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+title: "Selenium locators. Which one should I pick?"
+excerpt: "Selenium offers us eight location strategies in Web Driver. Lets dive into which locator to pick when automating a scenario. "
 coverImage: "/assets/blog/selenium.png"
 createdOn: "2020-03-18T05:35:07.322Z"
 updatedOn: "2020-03-18T05:35:07.322Z"
@@ -8,10 +8,52 @@ ogImage:
   url: "/assets/blog/selenium.png"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+Selenium offers us eight8 location strategies in Web Driver.  
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+Even though there are eight, in practice we mostly
+use `id`, `name` , `xpath` or `css selector`. The other locator
+strategies, `className`, `linkText`, `partial linkText` or `tagName` are used very rarely.
 
-## Lorem Ipsum
+## What if the element contains all the location strategies?
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+Consider below HTML snippet:    
+
+`<div id="element" class="class-name" name="element_name" style="color: red;">Element with all locator strategies</div>`
+
+Now which locator strategy should you pick to locate above element?
+
+Without a doubt, **id**!  
+Why? Because **by W3 standards id should be unique**.
+
+- HTML4:  
+  `id = name [CS] This attribute assigns a name to an element. This name must be unique in a document.`   
+
+- HTML5:  
+  `The id attribute specifies its element's unique identifier (ID). The value must be unique amongst all the IDs in the element's home subtree and must contain at least one character. The value must not contain any space characters.`
+
+## What if the element does not contain an id attribute?
+
+`<div class="class-name" name="element_name" style="color: red;">Element with all locator strategies</div>`
+
+Then you can use **name** attribute, but you have to be careful here. Name may not be unique within your web page. If it
+is unique, you can go ahead and use it.
+
+## What if the element does not have id or name attributes?
+
+Then you must choose between **Xpath** or **CSS Selector**.
+
+It is said that CSS Selector is faster than xpath, it is also said that there is not much of a difference. This is an
+ongoing debate in the testing community.
+
+If you ask me, I would prefer to use CSS Selector whenever I can. But there are places that I cannot use CSS
+Selector, and that is when I would switch to Xpath. For example only Xpath allows you to traverse the DOM or select non
+HTML elements. If I want more flexibility I would go with Xpath. If not I prefer CSS Selector.  
+
+So you need to evaluate your use case and select accordingly between these two.
+
+
+
+
+Happy Testing!   
+Nadeera
+
