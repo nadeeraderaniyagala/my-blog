@@ -1,6 +1,6 @@
 ---
-title: "Selenium locators. Which one should I pick?"
-excerpt: "Selenium offers us eight location strategies in Web Driver. Lets dive into which locator to pick when automating a scenario. "
+title: "Selenium locators. Which one should you pick?"
+excerpt: "Selenium offers us eight location strategies in Web Driver. Lets dive into which locator to pick when automating a test case. "
 coverImage: "/assets/blog/selenium.png"
 createdOn: "2020-03-18T05:35:07.322Z"
 updatedOn: "2020-03-18T05:35:07.322Z"
